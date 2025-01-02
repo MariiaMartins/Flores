@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olá pessoa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+        <div class="fog"></div>
+        <div class="container">
+          <div class="content">
+            <h1>Here's a reminder, for you</h1>
+            <p>Insira seu nome abaixo pf:</p>
+            <input type="text" id="nameInput" placeholder="Digite aqui..." />
+            <p id="greeting" style="display: none;"></p>
+          </div>
+        </div>
+      
+  <script>
+    document.getElementById("nameInput").addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        const name = event.target.value.trim();
+        if (name) {
+          const greeting = document.getElementById("greeting");
+          greeting.textContent = `Olá, ${name}! Complete: Uma flor para outra...`;
+          greeting.style.display = "block";
+          setTimeout(() => {
+            window.location.href = "pink-flowers.html";
+          }, 2000);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

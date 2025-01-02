@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black; 
+  color: white;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+
+.fog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent);
+  z-index: -1;
+  animation: fogMove 20s infinite linear;
+}
+
+
+@keyframes fogMove {
+  0% { transform: translate(-50%, -50%); }
+  50% { transform: translate(50%, 50%); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+
+.container {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(128, 128, 128, 0.8); 
+  border-radius: 15px;
+  padding: 20px 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 20vh;
+}
+
+
+.content h1 {
+  font-size: 24px;
+  color: black; 
+}
+
+.content p {
+  font-size: 16px;
+  color: black; 
+}
+
+.content input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  background-color: #ccc; 
+  color: rgb(0, 0, 0); 
+}
+
+.content input:focus {
+  outline: none;
+  border-color: #7597de;
+  box-shadow: 0 0 5px #7597de;
+}
